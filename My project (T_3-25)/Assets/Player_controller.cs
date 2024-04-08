@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Playercontroller : MonoBehaviour
+public class Player_controller : MonoBehaviour
 {
     public Rigidbody playerRigidBody;
     public float speed = 8f;
@@ -21,7 +20,7 @@ public class Playercontroller : MonoBehaviour
         float zInput = Input.GetAxis("vertical");
         float xSpeed = xINput * speed;
         float zSpeed = zInput * speed;
-        Vector3 newVelocity = new Vector3(xSpeed,0f,zSpeed);
+        Vector3 newVelocity = new Vector3(xSpeed, 0f, zSpeed);
         playerRigidBody.velocity = newVelocity;
     }
 
@@ -29,6 +28,4 @@ public class Playercontroller : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-
-
 }
